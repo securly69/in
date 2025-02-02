@@ -26,13 +26,13 @@ body::before {
    background-position: center;
    background-repeat: no-repeat;
    background-size: cover;
-   background-attachment: fixed;
    filter: blur(7px);
    /* Apply the blur effect only to the background */
    z-index: -1;
    /* Position the blurred background behind the content */
 }
 
+/* Content stays sharp */
 .main {
    font-family: "Inter", sans-serif;
    width: 99%;
