@@ -27,7 +27,7 @@ body {
    border: none;
    background: none;
    font-size: 12px;
-   color: cornflowerblue;
+   color: #ffdf00;
    /* Default color when li is not active */
    cursor: pointer;
    transition: color 0.3s ease;
@@ -45,7 +45,7 @@ li.active .close-tab {
 }
 
 li:not(.active) .close-tab {
-   color: #ffdf00;
+   color: cornflowerblue;
    /* Blue when li is not active */
 }
 
