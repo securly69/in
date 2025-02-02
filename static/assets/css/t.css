@@ -28,23 +28,19 @@ body {
    background: none;
    font-size: 12px;
    color: cornflowerblue;
-   /* Default: blue when li is not active */
    cursor: pointer;
    transition: color 0.3s ease;
    width: 20px;
 }
 
-/* Yellow when li is active */
 li.active .close-tab {
    color: #ffdf00;
 }
 
-/* Yellow when li is hovered */
 li:hover .close-tab {
    color: #ffdf00;
 }
 
-/* Yellow when close-tab itself is hovered */
 .close-tab:hover {
    color: #ffdf00;
 }
