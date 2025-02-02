@@ -238,8 +238,6 @@ li:hover {
 
 li:hover .close-tab {
    color: cornflowerblue;
-   background-color: #ffdf00;
-   /* Matches the text color of hovered li */
 }
 
 iframe {
