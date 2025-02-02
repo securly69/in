@@ -216,6 +216,7 @@ ul {
 li {
    padding: 0.4rem;
    background-color: #ffdf00;
+   color: cornflowerblue;
    margin-right: 0.5rem;
    cursor: pointer;
    border-radius: 5px;
@@ -227,10 +228,12 @@ li {
 
 li.active {
    background-color: cornflowerblue;
+   color: #ffdf00;
 }
 
 li:hover {
    background-color: cornflowerblue;
+   color: #ffdf00;
 }
 
 iframe {
@@ -239,5 +242,5 @@ iframe {
    height: 100%;
    border: none;
    left: 0;
-   top: 10%;
+   top: 0;
 }
