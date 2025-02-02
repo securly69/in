@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="referrer" content="no-referrer" />
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" id="tab-favicon" href="favicon.png" />
+    <title>MadEgg Proxy</title>
+    <link rel="stylesheet" href="/assets/css/index.css?v=003">
+  </head>
+  <body class="center" onload="SplashT">
+    <div class="nav">
+      <div id="icon-container">
+        <a class="icon" href="/./"><img alt="nav" id="INImg" src="https://png.pngtree.com/png-clipart/20230520/original/pngtree-angry-eggs-png-image_9166378.png"></a>
+      </div>
+      <div class="f-nav-right">
+        
+        
+        
+        <a class="navbar-link" href="/./settings"><i class="fa-solid fa-gear navbar-icon settings-icon"></i><an>Set</an><an>tings</an></a>
+      </div></div>    
+
+    <div class="time-date" id="time-date"></div>
+
+    <div id="particles-js"> <script rel="preload" src="https://cdn.jsdelivr.net/particles.js/2.0.0/"></script> <div class="main"><div class="search-container"> <form id="fv" method="POST"> <input id="iv" class="search-bar" placeholder="Search..." type="text" /> </form> </div> </div> </div>
+
+      <div class="bookmarks" id="bookmarks">
+          <a href="#" class="bookmark" onclick="go('https://www.youtube.com')">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Youtube_logo.png" alt="YouTube">
+              <span>YouTube</span>
+          </a>
+          <a href="#" class="bookmark" onclick="go('https://twitter.com')">
+              <img src="https://cdn.freebiesupply.com/logos/large/2x/twitter-3-logo-png-transparent.png" alt="Twitter">
+              <span>Twitter</span>
+          </a>
+          <a href="#" class="bookmark" onclick="go('https://discord.com')">
+              <img src="https://cdn.prod.website-files.com/6257adef93867e50d84d30e2/636e0a6a49cf127bf92de1e2_icon_clyde_blurple_RGB.png" alt="Discord">
+              <span>Discord</span>
+          </a>
+          <a href="#" class="bookmark" onclick="go('https://www.nvidia.com/en-us/geforce-now/')">
+              <img src="https://www.nesabamedia.com/wp-content/uploads/2022/06/GeForce-NOW-Logo-1.png" alt="GeForce Now">
+              <span>GeForce Now</span>
+          </a>
+      </div>
+
+        <div class="add-bookmark" id="add-bookmark">+ Add Bookmark</div>
+
+        <div class="add-bookmark-modal" id="add-bookmark-modal">
+            <input type="text" id="bookmark-name" placeholder="Bookmark Name" />
+            <input type="text" id="bookmark-url" placeholder="Bookmark URL" />
+            <button id="save-bookmark">Save</button>
+        </div>
+
+    <div class="top-right-menu">
+        <button class="menu-button" id="about-blank-cloaker">Search History Spammer</button>
+    </div>
+    <script src="assets/js/i.js?v=03"></script>
+    <script src="/assets/js/home.js?v=00"></script>
+    <script src="./assets/ultra/bundle.js?v=10-02-2024"></script>
+    <script src="./assets/ultra/config.js?v=10-02-2024"></script>
+    <script src="assets/js/f.js"></script>
+    <script src="/assets/js/mv.js?v=003"></script>
+    <script>
+        function updateTime() {
+            const now = new Date();
+            const timeString = now.toLocaleTimeString();
+            const dateString = now.toLocaleDateString();
+            document.getElementById('time-date').textContent = `${dateString} ${timeString}`;
+        }
+
+        setInterval(updateTime, 1000);
+        updateTime();
+
+        const addBookmarkButton = document.getElementById('add-bookmark');
+const addBookmarkModal = document.getElementById('add-bookmark-modal');
+const saveBookmarkButton = document.getElementById('save-bookmark');
+const bookmarksContainer = document.getElementById('bookmarks');
+
+addBookmarkButton.addEventListener('click', () => {
+    addBookmarkModal.style.display = 'flex';
+});
+
+saveBookmarkButton.addEventListener('click', () => {
+    const name = document.getElementById('bookmark-name').value;
+    const url = document.getElementById('bookmark-url').value;
+
+    if (name && url) {
+        const button = document.createElement('button');
+        button.className = 'bookmark';
+        button.onclick = () => go(url);
+
+        const img = document.createElement('img');
+        img.src = `https://www.google.com/s2/favicons?sz=64&domain_url=${encodeURIComponent(url)}`;
+        img.alt = name;
+        button.appendChild(img);
+
+        const span = document.createElement('span');
+        span.textContent = name;
+        button.appendChild(span);
+
+        bookmarksContainer.appendChild(button);
+
+        addBookmarkModal.style.display = 'none';
+    }
+});
+
+    const aboutBlankCloakerButton = document.getElementById('about-blank-cloaker');
+
+    aboutBlankCloakerButton.addEventListener('click', () => {
+        SHS();
+    });
+
+    function SHS() {
+        window.open("https://docs.google.com");
+        window.open("https://drive.google.com");
+        window.open("https://classroom.google.com");
+        window.open("https://classroom.google.com/u/1/a/not-turned-in/all");
+        window.open("https://slides.google.com");
+        window.open("https://google.com");
+        window.open("https://youtube.com");
+        window.open("https://www.edpuzzle.com");
+        window.open("https://www.gmail.com");
+        window.open("https://sheets.google.com");
+        window.open("https://www.google.com/search?q=12*24&sca_esv=3a3d99a76b27b006&sca_upv=1&rlz=1C1RXQR_enUS1083US1083&sxsrf=ACQVn09V_SVsiKr0Gc3aMU_yZ5-rWYiOAQ%3A1713404586665&sca_upv=1");
+        window.open("https://www.google.com/search?q=288%2F61&sca_esv=3a3d99a76b27b006&sca_upv=1");
+        window.open("https://www.google.com/search?q=formula+for+volume+of+a+cylinder");
+        window.open("https://www.google.com/search?q=formula+for+circufrence+of+a+circle");
+        window.open("https://drive.google.com/drive/u/0/");
+        window.open("https://drive.google.com/drive/u/0/my-drive");
+        window.open("https://drive.google.com/drive/u/0/starred");
+        window.open("https://drive.google.com/drive/u/0/shared-with-me");
+        window.open("https://drive.google.com/drive/u/0/trash");
+        window.open("https://mail.google.com/mail/u/0/?tab=rm&ogbl#snoozed");
+        window.open("https://mail.google.com/mail/u/0/?tab=rm&ogbl#drafts");
+        window.open("https://mail.google.com/mail/u/0/?tab=rm&ogbl#sent");
+        window.open("https://www.google.com/search?q=calculator");
+    }
+    </script>
+    <!-- DO NOT REMOVE-->
+  </body>
+</html>
