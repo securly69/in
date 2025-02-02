@@ -61,18 +61,17 @@ body {
 }
 
 .search-bar {
+    font-family: "Futura", Futura, serif;
     width: 550px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 15px;
-    cursor: pointer;
+    padding: 15px;
+    border: none;
+    border-radius: 25px;
     font-size: 1rem;
-    color: white;
+    backdrop-filter: white;
+    background: rgba(255, 255, 255, 0.2);
+    color: var(--text-primary);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    transition: background 0.3s ease, transform 0.3s ease;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 .search-bar::placeholder {
     color: var(--text-placeholder);
