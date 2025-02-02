@@ -1,29 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
-:root {
-    /* Background Variables */
-    --background-image: url("https://cdn.dribbble.com/users/234525/screenshots/5853076/eggsacrosstheuniverse.jpg");
-    --backdrop-filter: blur(10px) brightness(110%);
-    --background-nav: rgba(255, 255, 255, 0.2);
-    --background-color: #222;
-    --background-input: #4545459e;
-    --background-column: #353535;
-    --background-settings: #2a2a2a;
-    --background-buttons: #333;
-    --tab-active-background: lightskyblue;
-    --slider-active-background: #4caf50;
-    --slider-inactive-background: #ccc;
-    --nav-image: url("/./assets/media/favicon/main.png");
-    --text-primary: #fff;
-    --text-dark: #ffdf00;
-    --text-placeholder: cornflowerblue;
-    --save-button: #4caf50;
-    --reset-button: #f44336;
-    --import-button: #009688;
-    --export-button: #ea76cb;
-}
-
 * {
     margin: 0;
     padding: 0;
@@ -76,6 +53,7 @@ body {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     transition: background 0.3s ease, box-shadow 0.3s ease;
 }
+
 .search-bar::placeholder {
     color: white;
 }
@@ -249,10 +227,10 @@ img {
     min-height: 10vh;
     padding: 0 25px;
     box-sizing: border-box;
-    background-color: var(--background-nav);
+    background-color: rgba(255, 255, 255, 0.2);
     box-shadow: 0 0 15px 2px rgba(0, 0, 0, 0.5);
-    -webkit-backdrop-filter: var(--backdrop-filter);
-    backdrop-filter: var(--backdrop-filter);
+    -webkit-backdrop-filter: blur(10px) brightness(110%);
+    backdrop-filter: blur(10px) brightness(110%);
     transition: 0.35s ease;
     border-radius: 15px;
     width: fill;
@@ -273,7 +251,7 @@ img {
     font-size: 30px;
     font-family: "Inter", sans-serif;
     cursor: pointer;
-    color: var(--text-primary);
+    color: #fff;
     font-weight: 600;
     margin-left: 5px;
     font-style: normal;
@@ -289,7 +267,7 @@ img {
     transform: translateY(-50%);
     text-transform: uppercase;
     font-size: 18px;
-    color: var(--text-primary);
+    color: #fff;
     font-weight: 600;
     right: 2%;
 }
@@ -298,7 +276,7 @@ img {
     margin-left: 10px;
     text-transform: uppercase;
     cursor: pointer;
-    color: var(--text-primary);
+    color: #fff;
     font-weight: 800;
     right: 2%;
     font-family: "Inter", sans-serif;
@@ -314,7 +292,7 @@ img {
         text-transform: uppercase;
         font-size: 2.5vw;
         cursor: pointer;
-        color: var(--text-primary);
+        color: #fff;
         font-weight: 800;
         right: 2%;
         font-family: "Inter", sans-serif;
