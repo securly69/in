@@ -31,6 +31,7 @@
 }
 
 body {
+    /* biome-ignore lint/suspicious/noDuplicateFontNames: <explanation> */
     font-family: "Futura", Futura, serif;
     background: url('https://cdn.dribbble.com/users/234525/screenshots/5853076/eggsacrosstheuniverse.jpg') no-repeat center center fixed;
     background-size: cover;
@@ -43,6 +44,7 @@ body {
 }
 
 .time-date {
+    /* biome-ignore lint/suspicious/noDuplicateFontNames: <explanation> */
     font-family: "Futura", Futura, serif;
     font-size: 1.5rem;
     margin-bottom: 20px;
@@ -61,6 +63,7 @@ body {
 }
 
 .search-bar {
+    /* biome-ignore lint/suspicious/noDuplicateFontNames: <explanation> */
     font-family: "Futura", Futura, serif;
     width: 550px;
     padding: 15px;
@@ -203,6 +206,7 @@ body {
 }
 
 .menu-button {
+    /* biome-ignore lint/suspicious/noDuplicateFontNames: <explanation> */
     font-family: "Futura", Futura, serif;
     border: 2px solid white;
     padding: 10px;
