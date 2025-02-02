@@ -215,7 +215,7 @@ ul {
 
 li {
    padding: 0.4rem;
-   background-color: var(--background-settings);
+   background-color: cornflowerblue;
    margin-right: 0.5rem;
    cursor: pointer;
    border-radius: 5px;
@@ -226,11 +226,11 @@ li {
 }
 
 li.active {
-   background-color: var(--tab-active-background);
+   background-color: #ffdf00;
 }
 
 li:hover {
-   background-color: var(--tab-active-background);
+   background-color: #ffdf00;
 }
 
 iframe {
