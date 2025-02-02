@@ -5,18 +5,15 @@ body {
    /* Full viewport height */
    margin: 0;
    /* Reset default margin */
-   overflow: hidden;
-   /* Ensure no content is spilling outside */
-   position: relative;
-   /* Necessary for positioning the background blur */
    display: flex;
    justify-content: center;
    align-items: center;
+   overflow: hidden;
+   /* Ensure no content spills outside */
+   position: relative;
 }
 
-/* Pseudo-element to create the background blur */
-body::before {
-   content: "";
+.background-blur {
    position: absolute;
    top: 0;
    left: 0;
@@ -29,10 +26,9 @@ body::before {
    filter: blur(7px);
    /* Apply the blur effect only to the background */
    z-index: -1;
-   /* Position the blurred background behind the content */
+   /* Place the blurred background behind the content */
 }
 
-/* Content stays sharp */
 .main {
    font-family: "Inter", sans-serif;
    width: 99%;
