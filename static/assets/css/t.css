@@ -27,14 +27,14 @@ body {
    border: none;
    background: none;
    font-size: 12px;
-   color: var(--text-primary);
+   color: #ffdf00;
    cursor: pointer;
    transition: color 0.3s ease;
    width: 20px;
 }
 
 .close-tab:hover {
-   color: var(--text-primary);
+   color: #ffdf00;
 }
 
 .nav-bar {
