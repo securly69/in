@@ -1,77 +1,31 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
-:root {
-   /* Background Variables */
-   --background-image: url("https://cdn.dribbble.com/users/234525/screenshots/5853076/eggsacrosstheuniverse.jpg");
-   /* Background Image */
-   --backdrop-filter: blur(10px) brightness(110%);
-   /* Nav Backdrop filter */
-   --background-nav: rgba(255, 255, 255, 0.2);
-   /* Nav Background */
-   --background-color: white;
-   /* Main Background Color */
-   --background-input: transparent;
-   /* Input Field Background Color */
-   --background-column: #353535;
-   /* Background for Apps Container */
-   --background-settings: #2a2a2a;
-   /* Settings Card Background */
-   --background-buttons: transparent;
-   /* Button Background Color */
-   --tab-active-background: #444;
-   /* Accent Color for Tabs */
-   --tab-inactive-background: ;
-   /* Background Color for Tabs Not In Use */
-   --slider-active-background: #4caf50;
-   /* Active Slider Background Color */
-   --slider-inactive-background: #ccc;
-   /*  Slider Background Color */
-   --nav-image: url("/./assets/media/favicon/main.png");
-   /* Nav Logo */
-   /* Text Variables */
-   --text-primary: black;
-   /* Primary Text Color */
-   --text-dark: black;
-   /* Dark Text Color for Error Page, Scrollbar, and Particles */
-   --text-placeholder: #454545;
-   /* Placeholder Text Color */
-   /* Other Variables */
-   --save-button: #4caf50;
-   /* Save Button, Typically Green */
-   --reset-button: #f44336;
-   /* Reset Button, Typically Red */
-   --import-button: #009688;
-   /* Import Button, Typically Teal */
-   --export-button: #ea76cb;
-   /* Export Button, Typically Pink */
-}
-
 ::-webkit-scrollbar {
    width: 6px;
-   background-color: var(--background-color);
+   background-color: white;
 }
 
 ::-webkit-scrollbar-track {
    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
    border-radius: 10px;
-   background-color: var(--background-color);
+   background-color: white;
 }
 
 ::-webkit-scrollbar-thumb {
    border-radius: 10px;
    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-   background-color: var(--text-primary);
+   background-color: black;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-   background-color: var(--text-dark);
+   background-color: black;
 }
 
 body {
    font-family: "Inter", sans-serif;
    text-decoration: none;
-   background: var(--background-image);
+   background: url("https://cdn.dribbble.com/users/234525/screenshots/5853076/eggsacrosstheuniverse.jpg");
    height: 100%;
    background-position: center;
    background-repeat: no-repeat;
@@ -80,7 +34,7 @@ body {
 }
 
 ::placeholder {
-   color: var(--text-placeholder);
+   color: #454545;
    opacity: 1;
 }
 
@@ -98,9 +52,9 @@ body {
 }
 
 body {
-   background-color: var(--background-image);
+   background-color: url("https://cdn.dribbble.com/users/234525/screenshots/5853076/eggsacrosstheuniverse.jpg");
    font-family: "Inter", sans-serif;
-   color: var(--text-primary);
+   color: black;
    margin: 0;
    padding: 0;
    letter-spacing: 0px;
@@ -182,7 +136,7 @@ a {
    left: 0;
    right: 0;
    bottom: 0;
-   background-color: var(--slider-inactive-background);
+   background-color: #ccc;
    transition: 0.4s;
    border-radius: 34px;
 }
@@ -200,7 +154,7 @@ a {
 }
 
 input:checked+.slider-round {
-   background-color: var(--slider-active-background);
+   background-color: #4caf50;
 }
 
 input:checked+.slider-round:before {
@@ -210,24 +164,24 @@ input:checked+.slider-round:before {
 input {
    padding: 15px;
    border-radius: 10px;
-   background: var(--background-input);
+   background: transparent;
    text-align: center;
    font-size: 20px;
    border: none;
    outline: none;
-   color: var(--text-primary);
+   color: black;
 }
 
 .key-form {
    padding: 15px;
    width: 92.5%;
    border-radius: 10px;
-   background: var(--background-buttons);
+   background: transparent;
    text-align: center;
    font-size: 20px;
    border: none;
    outline: none;
-   color: var(--text-primary);
+   color: black;
    margin-top: 10px;
 }
 
@@ -252,10 +206,10 @@ button {
    border: 2px;
    transition: 0.2s;
    margin-top: 10px;
-   background-color: var(--background-buttons);
+   background-color: transparent;
    padding: 0.5rem;
    border-radius: 10px;
-   color: var(--text-primary);
+   color: black;
    height: 50px;
    width: 35%;
    padding: 10px;
@@ -266,8 +220,8 @@ select {
    padding: 15px;
    width: 100%;
    border-radius: 10px;
-   background: var(--background-buttons);
-   color: var(--text-primary);
+   background: transparent;
+   color: black;
    font-size: 20px;
    border: 0px;
    outline: none;
