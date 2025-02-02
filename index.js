@@ -98,11 +98,10 @@ app.use(express.static(path.join(__dirname, "static")));
 app.use("/fq", cors({ origin: true }));
 
 const routes = [
-  { path: "/yz", file: "apps.html" },
-  { path: "/up", file: "games.html" },
-  { path: "/play.html", file: "games.html" },
-  { path: "/vk", file: "settings.html" },
-  { path: "/rx", file: "tabs.html" },
+  { path: "/apps", file: "apps.html" },
+  { path: "/games", file: "games.html" },
+  { path: "/settings", file: "settings.html" },
+  { path: "/proxy", file: "tabs.html" },
   { path: "/", file: "index.html" },
 ];
 
