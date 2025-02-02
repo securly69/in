@@ -20,6 +20,7 @@ body {
    height: 0.5vw;
    display: flex;
    align-items: center;
+   background-color: #ffdf00;
 }
 
 .close-tab {
@@ -41,7 +42,7 @@ body {
    right: 0;
    height: 2.5em;
    padding: 0 25px;
-   background: var(--background-color);
+   background: #ffdf00;
    box-sizing: border-box;
    transition: 0.35s ease;
    z-index: 100;
@@ -51,7 +52,7 @@ body {
 
 .nav-button {
    border-radius: 10px;
-   color: var(--text-primary);
+   color: cornflowerblue;
    background: none;
    height: 3em;
    border: none;
