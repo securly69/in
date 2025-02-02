@@ -26,18 +26,16 @@ body {
    font-family: "Inter", sans-serif;
    text-decoration: none;
    height: 100vh;
-   /* Full viewport height */
    margin: 0;
-   /* Reset default margin */
+   border: 0;
+   /* Added to remove any default body border */
    overflow-x: hidden;
    position: relative;
-   /* Necessary for positioning the background blur */
    display: flex;
    justify-content: center;
    align-items: center;
 }
 
-/* Pseudo-element to create the background blur */
 body::before {
    content: "";
    position: absolute;
@@ -51,12 +49,10 @@ body::before {
    background-size: cover;
    background-attachment: fixed;
    filter: blur(7px);
-   /* Apply the blur effect only to the background */
    z-index: -1;
-   /* Position the blurred background behind the content */
+   /* transform: scale(1.01);  Optional: If border: 0 doesn't fully resolve it */
 }
 
-/* Content stays sharp */
 .main {
    font-family: "Inter", sans-serif;
    width: 99%;
@@ -66,7 +62,6 @@ body::before {
    align-items: center;
    position: relative;
    z-index: 1;
-   /* Keep the content above the blurred background */
 }
 
 .error {
