@@ -81,6 +81,7 @@ body {
    min-width: 5vw;
    min-height: 10vh;
    display: inline;
+   background-color: lightskyblue;
 }
 
 .nav-left {
@@ -191,8 +192,8 @@ p {
 #add-tab {
    padding: 0.5rem;
    cursor: pointer;
-   background-color: var(--background-settings);
-   color: var(--text-primary);
+   background-color: #ffdf00;
+   color: cornflowerblue;
    border: none;
    border-radius: 5px;
    margin-right: 0.5rem;
@@ -200,7 +201,8 @@ p {
 }
 
 #add-tab:hover {
-   background-color: var(--tab-active-background);
+   background-color: cornflowerblue;
+   color: #ffdf00;
 }
 
 ul {
