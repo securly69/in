@@ -45,7 +45,7 @@ li.active .close-tab {
 }
 
 li:not(.active) .close-tab {
-   color: cornflowerblue;
+   color: #ffdf00;
    /* Blue when li is not active */
 }
 
