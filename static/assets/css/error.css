@@ -52,10 +52,32 @@ body {
 }
 
 .error {
-   color: white;
+   letter-spacing: 0px;
    font-family: "Inter", sans-serif;
-   font-weight: 900;
-   top: 15%;
+   width: 99%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   top: 0%;
+   position: absolute;
+   z-index: 99;
+   background: rgba(0, 0, 0, 0.5);
+   /* Semi-transparent black background */
+   backdrop-filter: blur(10px);
+   /* Blurry background effect */
+   -webkit-backdrop-filter: blur(10px);
+   /* Safari support */
+   border-radius: 10px;
+   padding: 20px;
+   color: white;
+   /* Text color to make it stand out */
+   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+   /* Subtle shadow */
+   width: 90%;
+   /* Adjust width for better spacing */
+   max-width: 500px;
+   /* Maximum width */
    text-align: center;
 }
 
