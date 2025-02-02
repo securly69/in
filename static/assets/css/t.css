@@ -143,6 +143,7 @@ body {
    border-radius: 5px;
    margin: 0 auto;
    transition: 0.3s;
+   text-align: center;
 }
 
 .bar:focus {
@@ -154,7 +155,7 @@ body {
 }
 
 .navpost {
-   padding: none;
+   padding: 3px;
    float: right;
    margin-top: 0em;
    color: var(--text-primary);
