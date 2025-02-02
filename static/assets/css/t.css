@@ -37,6 +37,10 @@ body {
    color: #ffdf00;
 }
 
+.close-tab:active {
+   color:cornflowerblue
+}
+
 .nav-bar {
    left: 0;
    right: 0;
@@ -234,10 +238,6 @@ li.active {
 li:hover {
    background-color: cornflowerblue;
    color: #ffdf00;
-}
-
-li:active .close-tab {
-   color: cornflowerblue;
 }
 
 iframe {
