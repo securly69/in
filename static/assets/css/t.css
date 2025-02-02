@@ -27,18 +27,18 @@ body {
    border: none;
    background: none;
    font-size: 12px;
-   color: #ffdf00;
+   color: cornflowerblue;
    cursor: pointer;
    transition: color 0.3s ease;
    width: 20px;
 }
 
-.close-tab:hover {
-   color: #ffdf00;
+li.active {
+   color: cornflowerblue;
 }
 
-.close-tab:active {
-   color:cornflowerblue
+.close-tab:hover {
+   color: #ffdf00;
 }
 
 .nav-bar {
