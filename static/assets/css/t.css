@@ -27,16 +27,26 @@ body {
    border: none;
    background: none;
    font-size: 12px;
-   color: #ffdf00;
-   /* Set the initial color to yellow */
+   color: cornflowerblue;
+   /* Default color when li is not active */
    cursor: pointer;
    transition: color 0.3s ease;
    width: 20px;
 }
 
 .close-tab:hover {
+   color: #ffdf00;
+   /* Yellow on hover */
+}
+
+li.active .close-tab {
+   color: #ffdf00;
+   /* Yellow when li is active */
+}
+
+li:not(.active) .close-tab {
    color: cornflowerblue;
-   /* Change to blue on hover */
+   /* Blue when li is not active */
 }
 
 .nav-bar {
