@@ -1,24 +1,511 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="referrer" content="no-referrer" />
-    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN" />
-    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" id="tab-favicon" href="favicon.png" />
-    <title id="t">Home</title>
-    <link rel="stylesheet" id="global" href="/assets/css/global.css?v=6" />
-    <link rel="stylesheet" href="/assets/css/container.css?v=2" />
-    <link rel="stylesheet" href="/assets/css/nav.css?v=01" />
-    <link rel="stylesheet" href="/assets/css/settings.css?v=06" />
-    <script src="assets/js/f.js"></script>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6840529569014734"
-     crossorigin="anonymous"></script>
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="referrer" content="no-referrer">
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" id="tab-favicon" href="favicon.png">
+    <title id="t">Settings</title>
+    <style>
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
-  </head>
+:root {
+   /* Background Variables */
+   --background-image: url("https://cdn.dribbble.com/users/234525/screenshots/5853076/eggsacrosstheuniverse.jpg"); /* Background Image */
+   --backdrop-filter: blur(10px) brightness(110%); /* Nav Backdrop filter */
+   --background-nav: rgba(255, 255, 255, 0.2); /* Nav Background */
+   --background-color: white; /* Main Background Color */
+   --background-input: transparent; /* Input Field Background Color */
+   --background-column: #353535; /* Background for Apps Container */
+   --background-settings: #2a2a2a; /* Settings Card Background */
+   --background-buttons: transparent; /* Button Background Color */
+   --tab-active-background: #444; /* Accent Color for Tabs */
+   --tab-inactive-background: ; /* Background Color for Tabs Not In Use */
+   --slider-active-background: #4caf50; /* Active Slider Background Color */
+   --slider-inactive-background: #ccc; /*  Slider Background Color */
+   --nav-image: url("/./assets/media/favicon/main.png"); /* Nav Logo */
+   /* Text Variables */
+   --text-primary: black; /* Primary Text Color */
+   --text-dark: black; /* Dark Text Color for Error Page, Scrollbar, and Particles */
+   --text-placeholder: #454545; /* Placeholder Text Color */
+   /* Other Variables */
+   --save-button: #4caf50; /* Save Button, Typically Green */
+   --reset-button: #f44336; /* Reset Button, Typically Red */
+   --import-button: #009688; /* Import Button, Typically Teal */
+   --export-button: #ea76cb; /* Export Button, Typically Pink */
+}
+
+::-webkit-scrollbar {
+   width: 6px;
+   background-color: var(--background-color);
+}
+
+::-webkit-scrollbar-track {
+   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+   border-radius: 10px;
+   background-color: var(--background-color);
+}
+
+::-webkit-scrollbar-thumb {
+   border-radius: 10px;
+   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+   background-color: var(--text-primary);
+}
+
+::-webkit-scrollbar-thumb:hover {
+   background-color: var(--text-dark);
+}
+
+body {
+   font-family: "Inter", sans-serif;
+   text-decoration: none;
+   background: var(--background-image);
+   height: 100%;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-attachment: fixed;
+}
+
+::placeholder {
+   color: var(--text-placeholder);
+   opacity: 1;
+}
+
+.main {
+   letter-spacing: 0px;
+   font-family: "Inter", sans-serif;
+   width: 99%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   top: 0%;
+   position: absolute;
+   z-index: 99;
+}
+</style>
+    
+    <style>
+.material-symbols-outlined {
+   font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
+}
+
+.nav #icon-container {
+   display: flex;
+   align-items: center;
+}
+
+img {
+   width: 100%;
+   height: 100%;
+   padding-top: 5px;
+}
+
+.nav-container {
+   min-width: 5vw;
+   min-height: 10vh;
+   display: inline;
+}
+
+.nav {
+   top: 0;
+   letter-spacing: 2px;
+   font-size: 22px;
+   left: 0;
+   right: 0;
+   min-height: 10vh;
+   padding: 0 25px;
+   box-sizing: border-box;
+   background-color: var(--background-nav);
+   box-shadow: 0 0 15px 2px rgba(0, 0, 0, 0.5);
+   -webkit-backdrop-filter: var(--backdrop-filter);
+   backdrop-filter: var(--backdrop-filter);
+   transition: 0.35s ease;
+   border-radius: 15px;
+   width: fill;
+   margin: 15px;
+   z-index: 100;
+   position: fixed;
+}
+
+.nav .icon:hover {
+   transform: translateY(-15%) scale(1.03);
+   font-weight: 800;
+}
+
+.nav .icon {
+   position: absolute;
+   float: left;
+   text-transform: uppercase;
+   font-size: 30px;
+   font-family: "Inter", sans-serif;
+   cursor: pointer;
+   color: var(--text-primary);
+   font-weight: 600;
+   margin-left: 5px;
+   font-style: normal;
+   text-decoration: none;
+   transition: all 0.2s ease;
+   height: 5vh;
+   top: 18%;
+}
+
+.nav-right {
+   position: absolute;
+   top: 50%;
+   transform: translateY(-50%);
+   text-transform: uppercase;
+   font-size: 18px;
+   color: var(--text-primary);
+   font-weight: 600;
+   right: 2%;
+}
+
+.nav-right .navbar-link {
+   margin-left: 10px;
+   text-transform: uppercase;
+   cursor: pointer;
+   color: white;
+   font-weight: 800;
+   right: 2%;
+   font-family: "Inter", sans-serif;
+   font-style: normal;
+   text-decoration: none;
+   transition: all 0.2s ease;
+   transform: translateX(0%);
+}
+
+@media (orientation: portrait) {
+   .nav-right .navbar-link {
+      margin-left: 10px;
+      text-transform: uppercase;
+      font-size: 2.5vw;
+      cursor: pointer;
+      color: var(--text-primary);
+      font-weight: 800;
+      right: 2%;
+      font-family: "Inter", sans-serif;
+      font-style: normal;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      transform: translateX(0%);
+   }
+   .nav-right .navbar-link:hover {
+      text-transform: uppercase;
+      cursor: pointer;
+      font-weight: 800;
+      font-family: "Inter", sans-serif;
+      font-style: normal;
+      font-size: 3vw;
+      transform: translateX(-20%);
+   }
+}
+
+.nav-right .navbar-link:hover {
+   text-transform: uppercase;
+   cursor: pointer;
+   font-weight: 800;
+   font-family: "Inter", sans-serif;
+   font-style: normal;
+   font-size: 3vh;
+   transform: translateX(-20%);
+}
+
+.navbar-icon {
+   margin-right: 5px;
+   transition: all 0.2s ease;
+}
+
+.navbar-link {
+   margin-right: 5px;
+}
+
+.navbar-link:hover > .settings-icon {
+   animation: spin 0.5s;
+   animation-timing-function: cubic-bezier(0, 1.04, 0.91, 0.99);
+}
+
+@media (max-width: 768px) {
+   .f-nav-right .navbar-link an {
+      display: none;
+   }
+   .f-nav-right .fa-solid {
+      display: inline;
+   }
+   .f-nav-right .navbar-link {
+      font-size: 4.5vw;
+   }
+}
+
+@keyframes spin {
+   from {
+      transform: rotate(0deg);
+   }
+   to {
+      transform: rotate(360deg);
+   }
+}
+
+@media (orientation: portrait) {
+   img {
+      height: 40px;
+   }
+}
+</style>
+    <style>
+
+body {
+   background-color: var(--background-image);
+   font-family: "Inter", sans-serif;
+   color: var(--text-primary);
+   margin: 0;
+   padding: 0;
+   letter-spacing: 0px;
+   overflow-x: hidden;
+}
+
+.settings-container {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   gap: 20px;
+   padding: 20% 20px 20px 20px;
+}
+
+.settings-title {
+   display: block;
+   font-size: 70px;
+   margin-block-start: 0.67em;
+   margin-block-end: 0.67em;
+   margin-inline-start: 0px;
+   margin-inline-end: 0px;
+   font-weight: bold;
+}
+
+.settings-card {
+   background: rgba(255, 255, 255, 0.5); /* Semi-transparent background color */
+  backdrop-filter: blur(10px);          /* Blurry background effect */
+  -webkit-backdrop-filter: blur(10px); /* Safari support */
+  border-radius: 10px;                 /* Optional rounded corners */
+  padding: 20px;                       /* Padding for spacing */
+  color: black;
+   border-radius: 10px;
+   padding: 20px;
+   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+   width: 400px;
+   transition: all 0.3s ease;
+}
+
+.settings-card:hover {
+   transform: translatey(-5px);
+   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.settings-card h3 {
+   margin-top: 0;
+   color: black;
+}
+
+.settings-card p {
+   color: black;
+}
+
+a {
+   color: black;
+}
+
+.switch {
+   position: relative;
+   display: inline-block;
+   width: 60px;
+   height: 34px;
+}
+
+.switch input {
+   opacity: 0;
+   width: 0;
+   height: 0;
+}
+
+.slider-round {
+   position: absolute;
+   cursor: pointer;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   background-color: var(--slider-inactive-background);
+   transition: 0.4s;
+   border-radius: 34px;
+}
+
+.slider-round:before {
+   position: absolute;
+   content: "";
+   height: 26px;
+   width: 26px;
+   left: 4px;
+   bottom: 4px;
+   background-color: white;
+   transition: 0.4s;
+   border-radius: 50%;
+}
+
+input:checked + .slider-round {
+   background-color: var(--slider-active-background);
+}
+
+input:checked + .slider-round:before {
+   transform: translateX(26px);
+}
+
+input {
+   padding: 15px;
+   border-radius: 10px;
+   background: var(--background-input);
+   text-align: center;
+   font-size: 20px;
+   border: none;
+   outline: none;
+   color: var(--text-primary);
+}
+
+.key-form {
+   padding: 15px;
+   width: 92.5%;
+   border-radius: 10px;
+   background: var(--background-buttons);
+   text-align: center;
+   font-size: 20px;
+   border: none;
+   outline: none;
+   color: var(--text-primary);
+   margin-top: 10px;
+}
+
+.key-button {
+   cursor: pointer;
+   border: 2px;
+   font-size: 20px;
+   transition: 0.2s;
+   margin-top: 10px;
+   background-color: transparent;
+   padding: 0.5rem;
+   border-radius: 10px;
+   color: black;
+   height: 50px;
+   width: 50%;
+   padding: 10px;
+   text-align: center;
+}
+
+button {
+   cursor: pointer;
+   border: 2px;
+   transition: 0.2s;
+   margin-top: 10px;
+   background-color: var(--background-buttons);
+   padding: 0.5rem;
+   border-radius: 10px;
+   color: var(--text-primary);
+   height: 50px;
+   width: 35%;
+   padding: 10px;
+   text-align: center;
+}
+
+select {
+   padding: 15px;
+   width: 100%;
+   border-radius: 10px;
+   background: var(--background-buttons);
+   color: var(--text-primary);
+   font-size: 20px;
+   border: 0px;
+   outline: none;
+}
+
+#buttonLayer {
+   width: 400px;
+   display: flex;
+   justify-content: center;
+   gap: 10px;
+}
+
+#buttonLayer > .key-button {
+   flex-grow: 1;
+   padding: 10px;
+   box-sizing: border-box;
+}
+
+@media screen and (max-width: 768px) {
+   .settings-container {
+      padding: 25% 20px 20px 20px;
+   }
+   .settings-card {
+      width: 100%;
+      max-width: 400px;
+   }
+
+   .settings-title {
+      font-size: 40px;
+   }
+
+   input,
+   .key-form {
+      width: 90%;
+   }
+
+   button,
+   .key-button {
+      width: 100%;
+      max-width: 200px;
+   }
+}
+
+@media screen and (max-width: 500px) {
+   .settings-container {
+      padding-top: 35%;
+   }
+}
+
+@media screen and (min-width: 1000px) {
+   .settings-container {
+      padding-top: 10%;
+   }
+}
+
+#last-updated {
+   margin-top: -3%;
+}
+
+#ab-settings {
+   display: flex;
+   align-items: center;
+   gap: 5vw;
+}
+
+#ab-settings-container {
+   margin-top: 13px;
+   margin-left: 20px;
+}
+
+</style>
+    
+<style></style></head>
   <body>
-    <div class="f-nav"></div>
+    <div class="nav">
+      <div id="icon-container">
+        <a class="icon" href="/./"><img alt="nav" id="INImg" src="https://png.pngtree.com/png-clipart/20230520/original/pngtree-angry-eggs-png-image_9166378.png"></a>
+      </div>
+      <div class="nav-right">
+        
+        
+        
+        <a class="navbar-link" href="/./settings"><i class="fa-solid fa-gear navbar-icon settings-icon"></i><an>Set</an><an>tings</an></a>
+      </div></div>
     <div class="main">
       <div class="settings-container">
         <div class="settings-card">
@@ -213,69 +700,12 @@
           </select>
         </div>
         <div class="settings-card">
-          <h3>Particles</h3>
-          <p>
-            Add the particles that are from the previous version to the new
-            site.
-          </p>
-          <label class="switch">
-            <input type="checkbox" class="slider-checkbox" id="2" />
-            <span class="slider-round"></span>
-          </label>
-        </div>
-        <div class="settings-card">
-          <h3>Themes!</h3>
-          <p>Pick from a variety of themes to customize your experience.</p>
-          <select
-            placeholder="Solid Color Themes"
-            id="dropdown"
-            class="td"
-            onchange="themeChange(this)"
-          >
-            <option disabled selected>Solid Color Themes</option>
-            <option value="d">Default</option>
-            <option value="Inverted">Inverted</option>
-            <option value="sky">Sky</option>
-            <option disabled selected>Catppuccin Themes</option>
-            <option value="catppuccinMocha">Mocha</option>
-            <option value="catppuccinMacchiato">Macchiato</option>
-            <option value="catppuccinFrappe">Frappe</option>
-            <option value="catppuccinLatte">Latte</option>
-            <option disabled selected>Custom Themes</option>
-          </select>
-        </div>
-        <div class="settings-card">
           <h3>Information</h3>
-          <p>Version: v5.2.6</p>
-          <p id="last-updated">Last Updated: October 2nd, 2024</p>
-          <p>
-            Questions? Join our
-            <a href="https://discord.gg/interstellar">Discord community</a>,
-            email us at
-            <a href="mailto:hello@gointerstellar.app"
-              >hello@gointerstellar.app</a
-            >, or
-            <a href="https://docs.gointerstellar.app/faq">check our FAQ</a>!
-          </p>
+          <p>Version: v1.1.0</p>
+          <p id="last-updated">Last Updated: February 2nd, 2025</p>
         </div>
       </div>
     </div>
     <script src="/assets/js/mv.js?v=003"></script>
     <script src="/assets/js/settings.js?v=011"></script>
-    <!-- DO NOT REMOVE-->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-WKJQ5QHQTJ"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "G-WKJQ5QHQTJ");
-    </script>
-    <!-- DO NOT REMOVE-->
-  </body>
-</html>
+</body></html>
