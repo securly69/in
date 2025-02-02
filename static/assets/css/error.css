@@ -31,11 +31,15 @@ body {
    background-repeat: no-repeat;
    background-size: cover;
    background-attachment: fixed;
+   position: relative;
+   /* Ensure relative positioning for the overlay */
+   overflow-x: hidden;
 }
 
-body::before {
+/* Blur effect overlay */
+body::after {
    content: "";
-   position: fixed;
+   position: absolute;
    top: 0;
    left: 0;
    width: 100%;
