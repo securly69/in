@@ -8,8 +8,15 @@
   ],
   "routes": [
     {
+      "src": "/settings",
+      "dest": "/static/settings.html"
+    },
+    {
       "src": "/(.*)",
       "dest": "index.js"
     }
-  ]
+  ],
+  "static": {
+    "directory": "static"
+  }
 }
