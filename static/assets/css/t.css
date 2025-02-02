@@ -33,7 +33,7 @@ body {
    width: 20px;
 }
 
-.close-tab.active {
+.close-tab.before {
    color: cornflowerblue;
 }
 
