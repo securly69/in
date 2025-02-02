@@ -133,9 +133,9 @@ body {
 
 .bar {
    height: 20px;
-   background: none;
+   background: cornflowerblue;
    border: none;
-   color: var(--text-primary);
+   color: #ffdf00;
    width: 60vw;
    height: 30px;
    border-radius: 5px;
@@ -144,10 +144,10 @@ body {
 }
 
 .bar:focus {
-   background: var(--background-input);
+   background: #ffdf00;
    box-shadow: none;
    outline: none;
-   color: var(--text-primary);
+   color: cornflowerblue;
    transition: 0.3s;
 }
 
