@@ -236,7 +236,7 @@ li:hover {
    color: #ffdf00;
 }
 
-li:hover .close-tab {
+li:active .close-tab {
    color: cornflowerblue;
 }
 
