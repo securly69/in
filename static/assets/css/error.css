@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Futura&display=swap');
 
 ::-webkit-scrollbar {
    width: 6px;
@@ -54,37 +55,44 @@ body {
 .error {
    letter-spacing: 0px;
    font-family: "Inter", sans-serif;
-   width: 99%;
    display: flex;
    flex-direction: column;
    justify-content: center;
    align-items: center;
-   top: 0%;
-   position: absolute;
+   position: fixed;
+   top: 55%;
+   /* Move container down */
+   left: 50%;
+   transform: translate(-50%, -50%);
    z-index: 99;
-   background: rgba(0, 0, 0, 0.5);
-   /* Semi-transparent black background */
-   backdrop-filter: blur(10px);
+   background: rgba(255, 255, 255, 0.1);
+   /* Semi-transparent background */
+   backdrop-filter: blur(8px);
    /* Blurry background effect */
-   -webkit-backdrop-filter: blur(10px);
+   -webkit-backdrop-filter: blur(8px);
    /* Safari support */
    border-radius: 10px;
-   padding: 20px;
+   padding: 20px 25px;
+   /* Increased padding */
    color: white;
-   /* Text color to make it stand out */
+   /* Text color */
    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
    /* Subtle shadow */
-   width: 90%;
-   /* Adjust width for better spacing */
-   max-width: 500px;
-   /* Maximum width */
+   width: 65%;
+   /* Increased width */
+   max-width: 450px;
+   /* Increased max width */
+   height: auto;
+   /* Flexible height */
+   min-height: 180px;
+   /* Increased minimum height */
    text-align: center;
 }
 
 .error h1 {
-   font-size: 10vw;
-   margin: 0 auto -2vw auto;
-   background: linear-gradient(150deg, #746eff 0%, #ff00bb 51%, #746eff 100%);
+   font-size: 6vw;
+   margin: 0 0 10px 0;
+   background: linear-gradient(150deg, #746eff 0%, #ef996e 60%, #ef6ee4 100%);
    -webkit-background-clip: text;
    -moz-background-clip: text;
    background-clip: text;
@@ -92,49 +100,73 @@ body {
 }
 
 .error h3 {
-   font-size: 4vw;
-   margin-bottom: auto;
-   margin-top: auto;
+   font-size: 3vw;
+   margin: 10px 0;
    font-weight: 600;
 }
 
 .error p {
-   font-size: 2vw;
+   font-size: 1.4vw;
+   margin: 10px 0;
    font-weight: 700;
-   margin-top: 0.5%;
-   margin-bottom: 1%;
-   font-weight: 900;
    color: whitesmoke;
 }
 
 .error button {
-   padding: 15px;
+   padding: 12px 18px;
+   /* Slightly increased padding */
    border-radius: 5px;
    background: transparent;
    color: inherit;
-   font-size: 24px;
-   border: 2px solid white;
+   font-size: 15px;
+   /* Slightly larger button font size */
+   border: 2px solid transparent;
    outline: none;
    margin-bottom: 10px;
    cursor: pointer;
 }
 
+.error .one,
+.error .two,
+.error .three {
+   color: inherit;
+   border-color: transparent;
+   font-size: 22px;
+   /* Increased font size for the buttons */
+}
+
+.error button:hover {
+   background: rgba(255, 255, 255, 0.1);
+   /* Light background on hover */
+}
+
 .error .one:hover {
-   color: #ef6e78;
-   border: 2px solid #ef6e78;
-   background: transparent;
+   color: #746eff;
+   border-color: #746eff;
 }
 
 .error .two:hover {
    color: #ef996e;
-   border: 2px solid #ef996e;
-   background: transparent;
+   border-color: #ef996e;
 }
 
 .error .three:hover {
    color: #ef6ee4;
-   border: 2px solid #ef6ee4;
-   background: transparent;
+   border-color: #ef6ee4;
+}
+
+/* Apply Futura font to all elements except h3 */
+body,
+.error p,
+.error button,
+.error h1 {
+   font-family: 'Futura', sans-serif;
+   /* Futura font */
+}
+
+.error h3 {
+   font-family: "Inter", sans-serif;
+   /* Keep Inter font for h3 */
 }
 
 @media (max-width: 768px) {
